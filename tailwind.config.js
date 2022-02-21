@@ -9,6 +9,9 @@ module.exports = {
         catamaran: ["Catamaran", "sans-serif"],
         roboto:["Roboto", "sans-serif"],
         
+      },
+      boxShadow: {
+        "outline-black":"7px 5px 0 0 black"
       }
     },
   },

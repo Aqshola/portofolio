@@ -3,11 +3,22 @@
 @tailwind utilities;
 /* purgecss start ignore */
 
-@layer base{
-    h1,h2,h3,h4,h5,h6{
-        @apply font-catamaran;
-    }
-    /* p,a,div{
+@layer base {
+  html,
+  body {
+    
+    scroll-behavior: smooth;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-catamaran;
+  }
+
+  /* p,a,div{
         @apply font-roboto
     } */
 }
