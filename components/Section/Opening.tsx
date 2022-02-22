@@ -76,13 +76,13 @@ function Opening() {
         id="social"
         className="mt-12 flex gap-6 md:mt-16"
       >
-        <motion.a href="#" variants={boxChildTransition}>
+        <motion.a href="https://github.com/aqshola" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
           <AiFillGithub className="h-7 w-7 rounded-full transition-all hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
-        <motion.a href="#" variants={boxChildTransition}>
+        <motion.a href="mailto:aqsholafid2@gmail.com" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
           <AiOutlineMail className="h-7 w-7 transition-all   hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
-        <motion.a href="#" variants={boxChildTransition}>
+        <motion.a href="https://www.linkedin.com/in/aqshola/" target={"_blank"} variants={boxChildTransition}>
           <AiFillLinkedin className="h-7 w-7 transition-all  hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
       </motion.div>
