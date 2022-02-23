@@ -15,7 +15,7 @@ function Skills() {
   return (
     <motion.section
       
-      id="skills"
+      id="Skills"
       className="mx-auto flex h-screen max-w-screen-xl flex-col justify-center px-5 text-center"
     >
       <h1 className="text-5xl font-bold md:text-6xl">Tech Stack</h1>

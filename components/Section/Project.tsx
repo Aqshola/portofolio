@@ -17,7 +17,7 @@ function Project({ listProject }: Props) {
   return (
     <motion.section
       ref={ref}
-      id="projects"
+      id="Project"
       className=" mx-auto mb-10 mt-28 flex  min-h-screen max-w-screen-xl flex-col px-5 text-center"
     >
       <h1 className=" font-catamaran text-5xl font-bold md:text-6xl">
