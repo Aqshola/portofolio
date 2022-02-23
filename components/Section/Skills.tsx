@@ -30,16 +30,17 @@ function Skills() {
         initial="hidden"
         animate={inView ? "show" : ""}
       >
-        <motion.a href="" variants={boxChildTransition}>
+
+        <motion.a href="https://nextjs.org/" variants={boxChildTransition}>
           <SiNextdotjs className="h-16 w-16 md:h-24 md:w-24" />
         </motion.a>
-        <motion.a href="" variants={boxChildTransition}>
+        <motion.a href="https://reactjs.org/" variants={boxChildTransition}>
           <SiReact className="h-16 w-16 md:h-24 md:w-24" />
         </motion.a>
-        <motion.a href="" variants={boxChildTransition}>
+        <motion.a href="https://nodejs.org/en/" variants={boxChildTransition}>
           <SiNodedotjs className="h-16 w-16 md:h-24 md:w-24" />
         </motion.a>
-        <motion.a href="" variants={boxChildTransition}>
+        <motion.a href="https://www.typescriptlang.org/" variants={boxChildTransition}>
           <SiTypescript className="h-16 w-16 md:h-24 md:w-24" />
         </motion.a>
       </motion.div>

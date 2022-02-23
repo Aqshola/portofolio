@@ -34,7 +34,7 @@ function Project({ listProject }: Props) {
           <motion.div
             key={project.id}
             variants={boxChildTransition}
-            className="col-span-9 md:col-span-4 lg:col-span-3"
+            className="col-span-9 md:col-span-4 lg:col-span-3  min-h-96"
           >
             <ProjectCard
               title={project.title}
