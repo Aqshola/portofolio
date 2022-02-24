@@ -78,13 +78,13 @@ function Opening() {
         id="social"
         className="mt-12 flex gap-6 md:mt-16"
       >
-        <motion.a onClick={()=>splitbee.track("github")} href="https://github.com/aqshola" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
+        <motion.a aria-label="github" onClick={()=>splitbee.track("github")} href="https://github.com/aqshola" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
           <AiFillGithub className="h-7 w-7 rounded-full transition-all hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
-        <motion.a onClick={()=>splitbee.track("email")} href="mailto:aqsholafid2@gmail.com" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
+        <motion.a aria-label="email" onClick={()=>splitbee.track("email")} href="mailto:aqsholafid2@gmail.com" target={"_blank"} className="hover:cursor-alias" variants={boxChildTransition}>
           <AiOutlineMail className="h-7 w-7 transition-all   hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
-        <motion.a onClick={()=>splitbee.track("linkedin")} href="https://www.linkedin.com/in/aqshola/" target={"_blank"} variants={boxChildTransition}>
+        <motion.a aria-label="linkedin" onClick={()=>splitbee.track("linkedin")} href="https://www.linkedin.com/in/aqshola/" target={"_blank"} variants={boxChildTransition}>
           <AiFillLinkedin className="h-7 w-7 transition-all  hover:scale-125 hover:bg-[#FEF7D0]" />
         </motion.a>
       </motion.div>
@@ -92,7 +92,7 @@ function Opening() {
       {/* CV */}
       <motion.p variants={childTransition} className="mt-7">
         See my profile{" "}
-        <a href="https://drive.google.com/file/d/1OqbHDTKVfzIG9qBuK7UdgmQ_eyJMTwS0/view?usp=sharing" target={"_blank"} rel="noreferrer noopener" className="group relative w-full font-bold" onClick={()=>splitbee.track("cv")}>
+        <a aria-label="curiculum vitae" href="https://drive.google.com/file/d/1OqbHDTKVfzIG9qBuK7UdgmQ_eyJMTwS0/view?usp=sharing" target={"_blank"} rel="noreferrer noopener" className="group relative w-full font-bold" onClick={()=>splitbee.track("cv")}>
           <span className="absolute top-0 left-0 z-0 block h-full w-0 bg-[#FEF7D0] transition-all group-hover:w-full"></span>
           <span className="relative">here</span>
         </a>

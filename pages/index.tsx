@@ -14,6 +14,7 @@ type Props = {
 };
 
 const Home: NextPage<Props> = ({ data }) => {
+  
   return (
     <>
       <Head>
@@ -26,18 +27,18 @@ const Home: NextPage<Props> = ({ data }) => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:url" content="https://shola.me/" />
         <meta
           property="og:title"
           content="Aqshol Afid"
         />
         <meta
           property="og:description"
-          content="Aqshola Portofolio"
+          content="Aqshola Portofolio Website"
         />
-        {/* <meta
+        <meta
           property="og:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
+          content="https://www.datocms-assets.com/47269/1645664835-image.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -48,12 +49,12 @@ const Home: NextPage<Props> = ({ data }) => {
         />
         <meta
           property="twitter:description"
-          content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!"
+          content="Aqshola Portofolio Website"
         />
         <meta
           property="twitter:image"
-          content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png"
-        ></meta> */}
+          content="https://www.datocms-assets.com/47269/1645664835-image.png"
+        ></meta>
       </Head>
       <Nav />
       <Opening />
