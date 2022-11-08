@@ -5,7 +5,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        yellow:{
+          "primary":"#FDDA34"
+        }
+      },
       fontFamily:{
+        nunito:["Nunito",'sans-serif'],
         catamaran: ["Catamaran", "sans-serif"],
         roboto:["Roboto", "sans-serif"],
         
