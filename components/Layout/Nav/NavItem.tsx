@@ -10,14 +10,18 @@ interface Props extends HTMLMotionProps<"title"> {
 export default function NavItem({href, children, active=false, ...props }: Props) {
   return (
     <AnimatePresence>
-      <motion.a  href={href} className={"transition-all relative px-2  "+(active?"font-bold":" ")} {...props}>
+      <motion.a  href={href} className={"transition-all relative w-fit py-1 flex items-center px-5 md:px-7 "+(active?"font-medium":" ")} {...props}>
         {active && (
           <motion.span
-            className="absolute left-0 block h-full w-full bg-[#FEF7D0]"
+            className="absolute left-0 block h-full w-full bg-yellow-primary rounded-full "
             layoutId="active-layout"
+            transition={{
+              bounce:0.6,
+              type:"spring",
+            }}
           ></motion.span>
         )}
-        <span className="relative">{children}</span>
+        <span className="relative md:text-lg font-nunito text-center">{children}</span>
       </motion.a>
     </AnimatePresence>
   );
