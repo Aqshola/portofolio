@@ -3,7 +3,7 @@ export function spyScroll(callback:any){
         const section= document.querySelectorAll("section")   
         section.forEach(el=>{
             const top=el.offsetTop;
-            if(pageYOffset>=top-60){
+            if(scrollY>=top-150){
                 callback(el.getAttribute("id"))
             }
         })

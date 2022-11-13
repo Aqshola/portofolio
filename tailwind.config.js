@@ -17,7 +17,8 @@ module.exports = {
         
       },
       boxShadow: {
-        "outline-black":"7px 5px 0 0 black"
+        "outline-black":"7px 5px 0 0 black",
+        "outline-yellow":"7px 5px 0 0 #FDDA34",
       }
     },
   },
