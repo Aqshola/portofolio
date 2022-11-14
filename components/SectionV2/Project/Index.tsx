@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   boxChildTransition,
@@ -6,17 +6,30 @@ import {
   opacityTransition,
 } from "utils/transition";
 import Card from "components/SectionV2/Project/Card";
+import { DisplayProject, } from "types/types";
+import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
-type Props = {};
+type Props = {
+  listProject: DisplayProject[];
+};
 
-export default function Index({}: Props) {
+export default function Index({ listProject }: Props) {
+  const [ref, inView] = useInView();
+  // const router = useRouter();
+  // const [showModal, setshowModal] = useState(false);
+
+  function handleModal(slug: string) {}
+
   return (
     <motion.section
+      ref={ref}
       variants={containerTransition}
       initial="hidden"
-      animate="show"
+      animate={inView ? "show" : "hidden"}
       id="Project"
-      className=" mt-10 flex min-h-screen w-full flex-col p-5 md:mt-20"
+      className=" relative mt-10 flex min-h-screen w-full flex-col p-5 py-16 md:mt-20"
     >
       <motion.h2
         variants={boxChildTransition}
@@ -26,25 +39,36 @@ export default function Index({}: Props) {
       </motion.h2>
       <motion.p
         variants={opacityTransition}
-        className="font-nunito mx-auto mt-10 w-full text-center md:w-96"
+        className="font-nunito mx-auto mt-5 w-full text-center md:w-96"
       >
-        Welcome to the "My Work" section, there is a list of professional,
-        collaborating, or even personal work I have done while exploring web
-        development
+        Some of selected project {"I've"} been done
       </motion.p>
 
       <motion.div
         variants={containerTransition}
         initial="hidden"
         animate="show"
-        className="mx-auto mt-20 grid w-full  grid-cols-12 md:px-20"
+        className="mx-auto mt-20 grid w-full  grid-cols-12 gap-5 md:px-20"
       >
-        <motion.div
-          variants={boxChildTransition}
-          className="col-span-12 md:col-span-6 lg:col-span-3"
-        >
-          <Card />
-        </motion.div>
+        {listProject.map((el) => (
+          <motion.div
+            key={el.id}
+            variants={boxChildTransition}
+            className="col-span-12 min-h-[300px] md:col-span-6 lg:col-span-3 "
+            onClick={() => handleModal(el.id)}
+          >
+            <Link href={`/${el.slug}`}>
+              <Card
+                title={el.title}
+                exercpt={el.exercpt}
+                img={el.image}
+                key={el.id}
+                tech={el.stack}
+                link={el.link}
+              />
+            </Link>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.section>
   );

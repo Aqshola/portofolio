@@ -23,6 +23,7 @@
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.7",
     "react": "latest",
+    "react-datocms": "^4.0.4",
     "react-dom": "latest",
     "react-icons": "^4.3.1",
     "react-intersection-observer": "^8.33.1",

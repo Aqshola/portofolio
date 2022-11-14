@@ -7,15 +7,18 @@ import {
   svgParentTransition,
   svgPathTransition,
 } from "utils/transition";
+import { useInView} from "react-intersection-observer"
 
 export default function Index() {
+  const [ref, inView] = useInView();
   return (
     <motion.section
+      ref={ref}
       initial="hidden"
-      animate="show"
+      animate={inView?"show":"hidden"}
       variants={containerTransition}
       id="About"
-      className="mt-10 flex min-h-screen w-full"
+      className="mt-16 flex min-h-screen w-full"
     >
       <motion.div
         variants={containerTransition}
@@ -33,19 +36,22 @@ export default function Index() {
           variants={opacityTransition}
           className="mt-10 leading-relaxed"
         >
-          Yahallo Im Shola, a final year college student who really interested
-          in programming, especially web development and currently focusing on
-          frontend development. Well actually I started learning programming in
-          my first year of college, it was when I join Idcamp but sadly didn't
-          get elected to continue the next step. but from there, well you can
-          call it I've got some enlightenment ahahaha. after that im starting to
-          explore web development, not only that im also started collaborating
-          with fellow developers to build projects and yes im also got to learn
-          many awesome things from them. There lot of things I learn since im
-          exploring web development, I also enjoy learning, collaborating with
-          anyone, and getting feedback on what I've done, so I can make myself
-          better than before So, yeah this is the "about me" section, well this
-          w
+          Yahallo Im Shola, high spirited and exciting frontend developer.
+          Currently in my final year of college also doing some personal
+          projects for having fun and exploring some tech.
+        </motion.p>
+        <motion.p variants={opacityTransition} className="mt-5 leading-relaxed">
+          Started learning programming in my first year of college, it was when
+          I join Idcamp but sadly {"didn't"} get elected to continue the next step.
+          but from there, I got some enlightenment and began exploring web
+          development, focusing on frontend development using React Js as the
+          main tech stack. sometimes im doing backend stuff if {"it's"} necessary
+        </motion.p>
+        <motion.p variants={opacityTransition} className="mt-5 leading-relaxed">
+          You can see more {'"about me"'} in the next section or just check on {" "}
+          <a href="" className="underline">
+            my resume
+          </a>
         </motion.p>
       </motion.div>
       <motion.div

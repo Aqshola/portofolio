@@ -1,23 +1,60 @@
+import Next from "components/Icon/Next";
+import ReactJS from "components/Icon/ReactJS";
+import Image from "next/image";
 import React from "react";
 
-type Props = {};
+import { SiTailwindcss, SiExpress, SiReact, SiNextdotjs, SiMongodb, SiMaterialui } from "react-icons/si";
 
-export default function Card({}: Props) {
+type Props = {
+  link:string;
+  title: string;
+  exercpt: string;
+  img: {
+    url: string;
+    alt: string;
+    blurUpThumb: string;
+  };
+  tech: {
+    stack: string[];
+  };
+};
+
+export default function Card({ title, exercpt, img, tech, link }: Props) {
   return (
-    <div className="transition-shadow cursor-pointer flex w-full flex-col rounded-md border-2 border-black py-8 px-5 hover:shadow-outline-black">
-      <div className="group relative w-fit h-full py-1 pr-3 flex items-center rounded-sm">
-        <div className="transition-all group-hover:w-full absolute w-0 h-full  flex bg-yellow-primary">
-        
+    <div className="hover:shadow-outline-black flex h-full w-full cursor-pointer flex-col rounded-md border-2 border-black transition-shadow">
+      <div className="flex h-80 flex-col px-5 pt-8 ">
+        <div className="group relative flex w-fit items-center rounded-sm py-1 pr-3">
+          <div className="bg-yellow-primary absolute flex h-full w-0  transition-all group-hover:w-full"></div>
+          <a href={link} className="font-nunito relative z-10  w-fit rounded text-2xl font-semibold transition-all">
+            {title}
+          </a>
         </div>
-        <a className="relative z-10 transition-all  w-fit rounded font-nunito text-2xl font-semibold">ProjectA</a>
+        <p className=" mb-5 text-sm">{exercpt}</p>
+        <div className="mt-auto flex gap-3 justify-self-end">
+          {tech.stack.map((stack) => (
+            <div className="flex relative h-7 w-7 rounded-full" key={stack}>
+              {stack === "reactjs" && <SiReact className="w-full h-full"  />}
+              {stack === "nextjs" && <SiNextdotjs className="w-full h-full"  />}
+              {stack === "tailwind" && (<SiTailwindcss className="h-full w-full" />)}
+              {stack === "expressjs" && <SiExpress className="h-full w-full" />}
+              {stack === "mongodb" && <SiMongodb className="h-full w-full" />}
+              {stack === "materialui" && <SiMaterialui className="h-full w-full" />}
+            </div>
+          ))}
+        </div>
       </div>
-      <p className="mt-1 text-sm">Small, Desription about project</p>
-      <div className="mt-3 flex gap-3">
-        <div className="block h-7 w-7 rounded-full bg-gray-500"></div>
-        <div className="block h-7 w-7 rounded-full bg-gray-500"></div>
-        <div className="block h-7 w-7 rounded-full bg-gray-500"></div>
+      <div className="bg-yellow-primary mt-5 flex h-full w-full px-5 pt-5">
+        <div className="relative inline-block h-full w-full rounded">
+          <Image
+            src={img.url}
+            fill={true}
+            alt={img.alt}
+            blurDataURL={img.blurUpThumb}
+            placeholder="blur"
+            className="relative h-full w-full  rounded-md object-cover md:object-fill"
+          />
+        </div>
       </div>
-      <div className="mt-5 block h-32 w-full rounded bg-gray-600"></div>
     </div>
   );
 }

@@ -22,36 +22,45 @@
     } */
 }
 
-.box-image{
-  animation: marquee 3s linear infinite;
+
+
+.marquee-horizontal{
+  display: flex;
+  flex: 0 0 auto;
+  min-width: 100%;
+  animation: scrollX 4s linear 0s infinite;
+  animation-play-state: running;
+  animation-delay: 0s;
+  animation-direction: normal;
 }
 
-.box-image-horizontal{
-  animation: marquee-horizontal 3s linear infinite;
+.marquee-vertical{
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-width: 100%;
+  animation: scrollY 4s linear 0s infinite;
+  animation-play-state: running;
+  animation-delay: 0s;
+  animation-direction: normal;
+
 }
 
-.box-image2{
-  animation: marquee 4s linear infinite;
-}
-
-@keyframes marquee {
+@keyframes scrollX {
   0% {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+    transform: translateX(0%);
   }
+
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translateX(-100%);
   }
 }
-
-@keyframes marquee-horizontal {
+@keyframes scrollY {
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+    transform: translateY(0%);
   }
+
   100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    transform: translateY(100%);
   }
 }

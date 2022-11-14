@@ -8,7 +8,7 @@ import {
 
 import { motion } from "framer-motion";
 import { boxChildTransition, boxParentTransition } from "../../utils/transition";
-import { useInView } from "react-intersection-observer";
+import { useInView} from "react-intersection-observer"
 
 function Skills() {
   const [ref, inView] = useInView();
