@@ -1,9 +1,10 @@
 import React from 'react'
 import NextHead from "next/head"
 
-type Props = {}
 
-export default function Head({}: Props) {
+
+export default function Head() {
+  
   return (
     <NextHead>
         <title>House of Shola</title>
@@ -25,7 +26,7 @@ export default function Head({}: Props) {
         />
         <meta
           property="og:image"
-          content=""
+          content={`${process.env.NEXT_DOMAIN}/og-image.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -40,7 +41,7 @@ export default function Head({}: Props) {
         />
         <meta
           property="twitter:image"
-          content=""
+          content={`${process.env.NEXT_DOMAIN}/og-image.png`}
         />
       </NextHead>
   )

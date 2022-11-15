@@ -11,10 +11,10 @@ export default function Anchor({
   ...props
 }: Props & HTMLProps<HTMLAnchorElement>) {
   return (
-    <motion.div variants={boxChildTransition}>
+    <motion.div variants={boxChildTransition} className="group">
       <a
         {...props}
-        className="hover:fill-yellow-primary block h-9 w-9 fill-black transition-all hover:-translate-y-2 cursor-pointer"
+        className="group-hover:fill-yellow-primary block h-9 w-9 fill-black transition-all group-hover:-translate-y-2 cursor-pointer"
       >
         {children}
       </a>
