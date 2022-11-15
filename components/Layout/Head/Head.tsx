@@ -4,6 +4,8 @@ import NextHead from "next/head"
 
 
 export default function Head() {
+  const URL=process.env.NEXT_PUBLIC_DOMAIN
+  
   
   return (
     <NextHead>
@@ -15,7 +17,7 @@ export default function Head() {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://shola.me" />
+        <meta property="og:url" content={URL} />
         <meta
           property="og:title"
           content="House of Shola"
@@ -26,11 +28,11 @@ export default function Head() {
         />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_DOMAIN}/og-image.png`}
+          content={`${URL}/og-image.png`}
         />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="" />
+        <meta property="twitter:url" content={URL} />
         <meta
           property="twitter:title"
           content="House of Shola"
@@ -41,7 +43,7 @@ export default function Head() {
         />
         <meta
           property="twitter:image"
-          content={`${process.env.NEXT_DOMAIN}/og-image.png`}
+          content={`${URL}/og-image.png`}
         />
       </NextHead>
   )
