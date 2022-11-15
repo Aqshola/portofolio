@@ -24,10 +24,9 @@ export default function Card({ title, exercpt, img, tech, link }: Props) {
     <div className="hover:shadow-outline-black flex h-full w-full cursor-pointer flex-col rounded-md border-2 border-black transition-shadow">
       <div className="flex h-80 flex-col px-5 pt-8 ">
         <div className="group relative flex w-fit items-center rounded-sm py-1 pr-3">
-          <div className="bg-yellow-primary absolute flex h-full w-0  transition-all group-hover:w-full"></div>
-          <a href={link} className="font-nunito relative z-10  w-fit rounded text-2xl font-semibold transition-all">
+          <h3 className="font-nunito relative z-10  w-fit rounded text-2xl font-semibold transition-all">
             {title}
-          </a>
+          </h3>
         </div>
         <p className=" mb-5 text-sm">{exercpt}</p>
         <div className="mt-auto flex gap-3 justify-self-end">
@@ -43,15 +42,15 @@ export default function Card({ title, exercpt, img, tech, link }: Props) {
           ))}
         </div>
       </div>
-      <div className="bg-yellow-primary mt-5 flex h-full w-full px-5 pt-5">
-        <div className="relative inline-block h-full w-full rounded">
+      <div className="bg-yellow-primary mt-5 flex h-full w-full px-2 pt-5">
+        <div className="relative inline-block h-full w-full rounded aspect-auto">
           <Image
             src={img.url}
             fill={true}
-            alt={img.alt}
+            alt={img.alt || title}
             blurDataURL={img.blurUpThumb}
             placeholder="blur"
-            className="relative h-full w-full  rounded-md object-cover md:object-fill"
+            className="relative aspect-square w-full h-full  rounded-md object-fill"
           />
         </div>
       </div>
