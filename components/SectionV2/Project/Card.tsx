@@ -82,7 +82,7 @@ export default function Card({ title, exercpt, img, tech, link }: Props) {
         </div>
       </div>
       <div className="bg-yellow-primary mt-5 flex h-full w-full px-5 pt-5">
-        <div className="relative inline-block aspect-video h-full w-full rounded overflow-hidden">
+        <div className="relative inline-block aspect-video h-[initial] w-[initial] rounded overflow-hidden mx-auto">
           <Image
           sizes={img.url}
             src={img.url}
@@ -90,7 +90,7 @@ export default function Card({ title, exercpt, img, tech, link }: Props) {
             alt={img.alt || title}
             blurDataURL={img.blurUpThumb}
             placeholder="blur"
-            className="relative object-fill"
+            className="relative object-fill h-[initial] w-[initial]"
           />
         </div>
       </div>

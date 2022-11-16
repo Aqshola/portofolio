@@ -46,7 +46,7 @@ const ProjectDetail: NextPage<DetailProject> = ({ data }) => {
             <h1 className="mt-5 text-3xl font-semibold">
               {data.project.title}
             </h1>
-            <div className="mt-2 flex gap-2">
+            <div className="mt-2 flex gap-3">
               {data.project.stack.stack.map((stack: string) => (
                 <div className="relative flex h-7 w-7 rounded-full" key={stack}>
                   {stack === "reactjs" && (

@@ -89,16 +89,16 @@ export default function Index({}: Props) {
         animate="show"
         className="mx-auto mt-10 flex gap-5"
       >
-        <Anchor target="blank" rel="noreferrer noopener" href="https://github.com/Aqshola">
+        <Anchor label="Github" target="blank" rel="noreferrer noopener" href="https://github.com/Aqshola">
           <Github />
         </Anchor>
-        <Anchor  target="blank" rel="noreferrer noopener" href="https://www.linkedin.com/in/aqshola/">
+        <Anchor label="LinkedIn"  target="blank" rel="noreferrer noopener" href="https://www.linkedin.com/in/aqshola/">
           <LinkedIn />
         </Anchor>
-        <Anchor target="blank" rel="noreferrer noopener" href="mailto:aqsholafid2@gmail.com">
+        <Anchor label="Email" target="blank" rel="noreferrer noopener" href="mailto:aqsholafid2@gmail.com">
           <Email />
         </Anchor>
-        <Anchor target="blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1OszXSce3oFGXFKHURJu8B_oXfp0Oq7N1/view?usp=share_link">
+        <Anchor label="CV" target="blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1OszXSce3oFGXFKHURJu8B_oXfp0Oq7N1/view?usp=share_link">
           <Cv />
         </Anchor>
       </motion.div>
