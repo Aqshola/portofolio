@@ -10,6 +10,7 @@
   "dependencies": {
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
+    "@next/font": "^13.0.3",
     "@splitbee/web": "^0.3.0",
     "autoprefixer": "latest",
     "clsx": "^1.2.1",

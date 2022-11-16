@@ -10,7 +10,7 @@ type Props = {
 function Tooltip({children, tip, ...props}: Props) {
   return (
     <>
-    <ReactTippy {...props} trigger='mouseenter' interactive html={
+    <ReactTippy {...props} theme="light" size='small' interactiveBorder={2} className="font-semibold" interactive html={
         <div className=''>
             {tip}
         </div>

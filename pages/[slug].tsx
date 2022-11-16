@@ -1,7 +1,7 @@
 import React from "react";
 import type { NextPage } from "next";
 import Link from "next/link";
-import { SiGithub, SiGooglechrome } from "react-icons/si";
+import { SiGithub, SiGo, SiGooglechrome } from "react-icons/si";
 import { request } from "lib/datocms";
 import { DetailProject } from "types/types";
 import {
@@ -13,95 +13,118 @@ import {
   SiMaterialui,
 } from "react-icons/si";
 
-import { StructuredText, renderMetaTags} from "react-datocms";
+import { StructuredText, renderMetaTags } from "react-datocms";
 import Image from "next/image";
 import Head from "next/head";
+import Tooltip from "components/Layout/Tooltip/Tooltip";
 
 const ProjectDetail: NextPage<DetailProject> = ({ data }) => {
   return (
     <>
-    <Head>
-        {renderMetaTags([...data.project._seoMetaTags])}
-    </Head>
-    <div className="mx-auto grid  min-h-screen max-w-screen-2xl grid-cols-12 px-5 pb-10">
-      <div className="col-span-12 py-5 md:col-start-3 md:col-end-10">
-        {/* NAV */}
-        <Link passHref href={"/"}>
-          <span className="hover:bg-yellow-primary rounded py-1 px-1 transition-colors">
-            Home
-          </span>
-        </Link>
+      <Head>{renderMetaTags([...data.project._seoMetaTags])}</Head>
+      <div className="mx-auto grid  min-h-screen max-w-screen-2xl grid-cols-12 px-5 pb-10">
+        <div className="col-span-12 py-5 md:col-start-3 md:col-end-10">
+          {/* NAV */}
+          <Link passHref href={"/"}>
+            <span className="hover:bg-yellow-primary rounded py-1 px-1 transition-colors">
+              Home
+            </span>
+          </Link>
 
-        <div className="mt-5">
-          {/* IMAGE WEB */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-md border-2 border-black shadow-md">
-            <Image
-              src={data.project.image.url}
-              alt={data.project.image.alt || data.project.title}
-              blurDataURL={data.project.image.blurUpThumb}
-              fill={true}
-              className="w-full object-cover"
-            />
-          </div>
-          {/* HEADER */}
-          <h1 className="mt-5 text-3xl font-semibold">{data.project.title}</h1>
-          <div className="mt-2 flex gap-2">
-            {data.project.stack.stack.map((stack: string) => (
-              <div className="relative flex h-7 w-7 rounded-full" key={stack}>
-                {stack === "reactjs" && <SiReact className="h-full w-full" />}
-                {stack === "nextjs" && (
-                  <SiNextdotjs className="h-full w-full" />
-                )}
-                {stack === "tailwind" && (
-                  <SiTailwindcss className="h-full w-full" />
-                )}
-                {stack === "expressjs" && (
-                  <SiExpress className="h-full w-full" />
-                )}
-                {stack === "mongodb" && <SiMongodb className="h-full w-full" />}
-                {stack === "materialui" && (
-                  <SiMaterialui className="h-full w-full" />
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="mt-5 flex gap-5">
-            {data.project.repo && (
-              <a
-                href={data.project.repo}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="hover:bg-yellow-primary flex  cursor-pointer items-center gap-2 rounded border-2 border-black px-2 py-1 transition-colors"
-              >
-                <span>
-                  <SiGithub className="h-6 w-6" />
-                </span>
-                <span>Repository</span>
-              </a>
-            )}
+          <div className="mt-5">
+            {/* IMAGE WEB */}
+            <div className="relative aspect-video w-full overflow-hidden rounded-md border-2 border-black shadow-md">
+              <Image
+                src={data.project.image.url}
+                alt={data.project.image.alt || data.project.title}
+                blurDataURL={data.project.image.blurUpThumb}
+                fill={true}
+                className="w-full object-fill"
+              />
+            </div>
+            {/* HEADER */}
+            <h1 className="mt-5 text-3xl font-semibold">
+              {data.project.title}
+            </h1>
+            <div className="mt-2 flex gap-2">
+              {data.project.stack.stack.map((stack: string) => (
+                <div className="relative flex h-7 w-7 rounded-full" key={stack}>
+                  {stack === "reactjs" && (
+                    <Tooltip tip="React JS">
+                      <SiReact className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                  {stack === "nextjs" && (
+                    <Tooltip tip="Next JS">
+                      <SiNextdotjs className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                  {stack === "tailwind" && (
+                    <Tooltip tip="Tailwind">
+                      <SiTailwindcss className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                  {stack === "expressjs" && (
+                    <Tooltip tip="Express JS">
+                      <SiExpress className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                  {stack === "mongodb" && (
+                    <Tooltip tip="MongoDB">
+                      <SiMongodb className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                  {stack === "materialui" && (
+                    <Tooltip tip="Material UI">
+                      <SiMaterialui className="h-full w-full" />
+                    </Tooltip>
+                  )}
 
-            {data.project.link&& (
-              <a
-                href={data.project.link}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="hover:bg-yellow-primary flex  cursor-pointer items-center gap-2 rounded border-2 border-black px-2 py-1 transition-colors"
-              >
-                <span>
-                  <SiGooglechrome className="h-6 w-6" />
-                </span>
-                <span>Live site</span>
-              </a>
-            )}
-          </div>
+                  {stack === "golang" && (
+                    <Tooltip tip="Golang">
+                      <SiGo className="h-full w-full" />
+                    </Tooltip>
+                  )}
+                </div>
+              ))}
+            </div>
+            <div className="mt-5 flex gap-5">
+              {data.project.repo && (
+                <a
+                  href={data.project.repo}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="hover:bg-yellow-primary flex  cursor-pointer items-center gap-2 rounded border-2 border-black px-2 py-1 transition-colors"
+                >
+                  <span>
+                    <SiGithub className="h-6 w-6" />
+                  </span>
+                  <span>Repository</span>
+                </a>
+              )}
 
-          {/* CONTENT */}
-          <div id="content" className="mt-10">
-            <StructuredText data={data.project.content.value} />
+              {data.project.link && (
+                <a
+                  href={data.project.link}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="hover:bg-yellow-primary flex  cursor-pointer items-center gap-2 rounded border-2 border-black px-2 py-1 transition-colors"
+                >
+                  <span>
+                    <SiGooglechrome className="h-6 w-6" />
+                  </span>
+                  <span>Live site</span>
+                </a>
+              )}
+            </div>
+
+            {/* CONTENT */}
+            <div id="content" className="mt-10">
+              <StructuredText data={data.project.content.value} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };
@@ -184,6 +207,7 @@ export async function getStaticProps({ params, preview = false }: any) {
       props: {
         data,
       },
+      revalidate:60
     };
   } catch (error) {
     return {

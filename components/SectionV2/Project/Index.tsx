@@ -54,7 +54,7 @@ export default function Index({ listProject }: Props) {
           <motion.div
             key={el.id}
             variants={boxChildTransition}
-            className="col-span-12 min-h-[300px] md:col-span-6 lg:col-span-3 "
+            className="col-span-12 h-[370px] md:col-span-6 lg:col-span-3 "
             onClick={() => handleModal(el.id)}
           >
             <Link href={`/${el.slug}`}>

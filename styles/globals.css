@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 /* purgecss start ignore */
+main{
+  @apply font-nunito;
+}
 
 @layer base {
   html,
@@ -20,6 +23,14 @@
   /* p,a,div{
         @apply font-roboto
     } */
+}
+
+.tippy-tooltip-content{
+  @apply  text-black
+}
+
+.tippy-tooltip{
+  border: 2px solid black;
 }
 
 #content h2{

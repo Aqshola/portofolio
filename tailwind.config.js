@@ -1,3 +1,4 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -11,10 +12,7 @@ module.exports = {
         }
       },
       fontFamily:{
-        nunito:["Nunito",'sans-serif'],
-        catamaran: ["Catamaran", "sans-serif"],
-        roboto:["Roboto", "sans-serif"],
-        
+        nunito:["var(--font-nunito)",...fontFamily.sans],
       },
       boxShadow: {
         "outline-black":"7px 5px 0 0 black",

@@ -15,6 +15,7 @@ export default function Head() {
           name="description"
           content="Yahallo, Im Shola cheerful exciting, friendly frontend developer who likes learning new stuff and collaborating. So yeah welcome to my house."
         />
+        <meta name="keywords" content="aqshol afid, aqshol, shola, frontend, frontend engineer, frontend developer" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content={URL} />
