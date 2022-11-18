@@ -46,17 +46,17 @@ export default function Index() {
         </motion.p>
         <table className="mt-2 text-sm md:text-base">
           <tbody>
-            <tr>
+            <tr className="bg-black text-yellow-primary shadow-md px-2 py-1">
               <td className="font-medium">Language</td>
               <td>:</td>
               <td>Javascript, Typescript, PHP</td>
             </tr>
-            <tr>
+            <tr className="bg-black text-yellow-primary shadow-md px-2 py-1 w-fit">
               <td className="font-medium">Web Framework</td>
               <td>:</td>
               <td>React Js, Next Js, Express, Laravel</td>
             </tr>
-            <tr>
+            <tr className="bg-black text-yellow-primary shadow-md px-2 py-1 w-fit">
               <td className="font-medium">Database</td>
               <td>:</td>
               <td>MySQL, PostgreSQL, MongoDB</td>
