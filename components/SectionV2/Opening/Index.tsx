@@ -98,7 +98,7 @@ export default function Index({}: Props) {
         <Anchor label="Email" target="blank" rel="noreferrer noopener" href="mailto:aqshola.afid@gmail.com">
           <Email />
         </Anchor>
-        <Anchor label="CV" target="blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/1fvxdBQ66Dol9TiwW3IV03RltfoG38E7W/view?usp=share_link">
+        <Anchor label="CV" target="blank" rel="noreferrer noopener" href="https://drive.google.com/file/d/10x6yLXhnCwBhRo9T7vsalc0ZaRliZb9h/view?usp=share_link">
           <Cv />
         </Anchor>
       </motion.div>

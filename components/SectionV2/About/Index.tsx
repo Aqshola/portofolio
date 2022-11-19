@@ -49,7 +49,7 @@ export default function Index() {
         </motion.p>
         <motion.p variants={opacityTransition} className="mt-5 leading-relaxed">
           You can see more {'"about me"'} in the next section or just check on {" "}
-          <a href="https://drive.google.com/file/d/1fvxdBQ66Dol9TiwW3IV03RltfoG38E7W/view?usp=share_link" className="transition-all underline cursor-pointer border-black">
+          <a href="https://drive.google.com/file/d/10x6yLXhnCwBhRo9T7vsalc0ZaRliZb9h/view?usp=share_link" className="transition-all underline cursor-pointer border-black">
             my resume
           </a>
         </motion.p>
